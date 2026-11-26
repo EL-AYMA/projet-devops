@@ -1,6 +1,7 @@
 # 1. Image officielle Python légère
-FROM python:3.12-slim
-
+    FROM python:3.12-slim
+    ARG VCS_REF 
+LABEL org.opencontainers.image.revision=$VCS_REF 
 # 2. Répertoire de travail
 WORKDIR /app
 
